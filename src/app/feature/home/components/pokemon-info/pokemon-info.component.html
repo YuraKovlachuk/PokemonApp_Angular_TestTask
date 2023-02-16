@@ -1,0 +1,24 @@
+<app-skeleton *ngIf="!pokemon"></app-skeleton>
+<!--<p *ngIf="pokemon">{{pokemon.name}}</p>-->
+<a *ngIf="pokemon" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+  <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" [src]="pokemon.image" [alt]="pokemon.image">
+  <div class="flex flex-col justify-between p-4 leading-normal">
+    <h2
+      class="mb-2 font-bold tracking-tight text-gray-900 dark:text-white"
+      style="text-transform: capitalize;">{{pokemon.name}}</h2>
+    <div class="flex gap-2.5">
+      <div>
+        <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-0.5">Abilities: </h4>
+        <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+          <li *ngFor="let ability of pokemon.abilities">{{ability}}</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-0.5">Types: </h4>
+        <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+          <li *ngFor="let type of pokemon.types">{{type}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</a>

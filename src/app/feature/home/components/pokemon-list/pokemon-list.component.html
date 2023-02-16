@@ -1,0 +1,17 @@
+<div class="list">
+  <mat-card (click)="onSelectPokemon(pokemon.name)"
+            class="card"
+            *ngFor="let pokemon of pokemonPage">
+    <mat-card-content>
+      {{pokemon.name}}
+    </mat-card-content>
+  </mat-card>
+</div>
+<mat-paginator #paginator *ngIf="pokemons"
+                 [length]="pokemons.length"
+                 [pageSize]="12"
+                 (page)="onPageChange($event)"
+                 aria-label="Select page">
+</mat-paginator>
+
+

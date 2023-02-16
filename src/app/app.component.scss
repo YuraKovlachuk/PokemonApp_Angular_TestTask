@@ -1,0 +1,15 @@
+.container {
+  margin: 20px 0 0 0 ;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
+  gap: 15px;
+}
+
+app-pokemon-list {
+  width: 50%;
+}
+
+app-pokemon-info {
+  width: 50%;
+}
